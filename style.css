@@ -1,3 +1,8 @@
+
+body{
+   border:7px dotted greenyellow;
+   background-color:orange;
+}
 .secretnumber{
     display: inline-block;
     border:4px solid black;
@@ -10,24 +15,28 @@
 h1{
     margin-left:36%;
 }
-.number{
+.num{
    font-size: 120%;
    border: 8px inset black;
    margin-left: 35%;
    margin-bottom: 10%;
    padding-top: 1%;
-   padding-bottom: 1%;
-   text-align: right;
+   text-align:justify;
 }
 .b1{
     background-color: grey;
     border: 4px solid black;
     font-size: 148%;
     padding-top: 1%;
-   padding-bottom: 1%;
+    padding-bottom: 0.2%;
+   
 }
 .b1:hover{
-    background-color: green;
+    background-color: greenyellow;
+    color:blue;
+}
+.h2{
+    margin-left: 3%;
 }
 
 .attempt{
@@ -37,21 +46,25 @@ h1{
 .highscore{
     display: inline;
     font-size: 2vw;
+    
 }
 .bottomDiv{
     font-size: 2vw;
     text-align: right;
-    margin-right: 10%;
+    margin-left: 50%;
+    display: inline;
 }
 .again{
     background-color: grey;
     border: 4px solid black;
     font-size: 70%;
     padding-top: 1%;
-   padding-bottom: 1%;
+    margin-bottom: 1%;
+   
 }
 .again:hover{
-    background-color: green;
+    background-color: greenyellow;
+    color:blue;
 }
 
 
