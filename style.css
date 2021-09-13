@@ -4,7 +4,7 @@ body{
    background-color:orange;
 }
 .secretnumber{
-    display: inline-block;
+    display:inline-block;
     border:4px solid black;
     font-size: 7vw;
     margin: auto;
@@ -13,7 +13,7 @@ body{
     padding-right: 2%;
 }
 h1{
-    margin-left:36%;
+    margin-left:27%;
 }
 .num{
    font-size: 120%;
@@ -37,6 +37,8 @@ h1{
 }
 .h2{
     margin-left: 3%;
+    font-size: 35px;
+    margin-top: -17px;
 }
 
 .attempt{
