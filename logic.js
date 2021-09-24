@@ -6,38 +6,58 @@ let attempt=15;
 let highscore=0;
 
 document.querySelector('.b1').addEventListener('click',function(){
-   
+
     let number=document.querySelector('.num').value;
     if(!number){
         document.querySelector('.h2').textContent=" No Number!!!";
     }
     else if(number==secretnumber){
-        document.querySelector('.h2').textContent="hurry!!!! Correct Number";
+         document.querySelector('.h2').textContent="hurray!!!! Correct Number";
          document.querySelector('.secretnumber').textContent=secretnumber;
          document.querySelector('.secretnumber').style.background="greenyellow";
-       document.querySelector('.highscore').textContent=attempt;
-       document.body.style.backgroundImage="url(img/happy.jpg)";
-       document.body.style.backgroundSize="100%";
-       document.querySelector('.h2').style.color="red";
-       
-    }
+         document.body.style.backgroundImage="url(img/happy.jpg)";
+         document.body.style.backgroundSize="100%";
+         document.querySelector('.h2').style.color="red";
+         if(attempt>highscore){
+             highscore=attempt;
+            document.querySelector('.highscore').textContent=highscore;
+            } 
+        }
+            
     else if(number<secretnumber){
-        document.querySelector('.h2').textContent="Guess Higher Number";
+        if(attempt>1){
+            document.querySelector('.h2').textContent="Guess Higher Number";
         attempt--;
         document.querySelector('.attempt').textContent=attempt;
-        
+        }
+        else{
+            document.querySelector('.h2').textContent="You Loss The Game :((((";
+            document.querySelector('.attempt').textContent="0";
+        } 
     }
     else{
-        document.querySelector('.h2').textContent="Guess Lower Number";
-        attempt--;
-        document.querySelector('.attempt').textContent=attempt;
-        
+        if(attempt>1){
+            document.querySelector('.h2').textContent="Guess Lower Number";
+            attempt--;
+            document.querySelector('.attempt').textContent=attempt;
+        }
+        else{
+            document.querySelector('.h2').textContent="You Loss The Game :((((";
+            document.querySelector('.attempt').textContent="0";
+        } 
     }
 });
 
 document.querySelector('.again').addEventListener('click',function(){
 
-    document.querySelector('.h2').textContent.bold="Start Guessing........";
-    document.querySelector('.attempt').value=15;
+    attempt=15;
+    document.querySelector('.h2').textContent="Start Guessing........";
+    document.querySelector('.attempt').textContent="15";
+    document.querySelector('.num').value="";
+    document.body.style.backgroundImage="";
+    document.querySelector('.h2').style.color="black";
+    document.querySelector('.secretnumber').style.background="";
+    document.querySelector('.secretnumber').textContent="?";
+    secretnumber=Math.trunc(Math.random()*30)+1;
 
 });
